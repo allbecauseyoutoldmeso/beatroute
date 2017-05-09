@@ -20,6 +20,10 @@ describe('DiscogsApiCall', function() {
     expect(discogsApiCall.trackArray).toContain('Michel Fuentes - Anything')
   });
 
+  it('it formats the array to stringent, rigorous specifications', function() {
 
+    discogsApiCall.getTrackArray(DemoData());
+    expect(discogsApiCall.formatTrackArray()).toContain('Michel+Fuentes+Anything');
+  });
 
 });

@@ -19,7 +19,12 @@ DiscogsApiCall.prototype.jsonParseResponse = function() {
   return this.parsedObject;
 };
 
-
+DiscogsApiCall.prototype.getTrackArray = function(parsedObject) {
+    this.trackArray = [];
+    for(var x = 0; x < 10; x++) {
+    this.trackArray.push(parsedObject.results[x].title);
+    }
+};
 
 //jsonObj.results[0].title.split(' - ');
 //jsonObj.results[19].title.split('-')[0].replace(' (2)','').replace('*','').trim()
