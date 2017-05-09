@@ -34,7 +34,7 @@ DiscogsApiCall.prototype.formatTrackArray = function() {
   return formattedTracks;
 };
 
-//jsonObj.results[0].title.split(' - ');
-//jsonObj.results[19].title.split('-')[0].replace(' (2)','').replace('*','').trim()
-//...and then render as a series of hashes with key/value pairs artist: x and song: y
-//jsonObj.results.forEach (function(song) { console.log(song.title.split(' - ')) });
+//DA = new DiscogsApiCall('Sweden');
+//DA.sendRequest();
+//DA.getTrackArray(DA.jsonParseResponse());
+//DA.formatTrackArray()
