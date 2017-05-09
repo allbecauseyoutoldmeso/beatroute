@@ -3,8 +3,8 @@
 function DiscogsApiCall(country) {
   this.url = 'https://api.discogs.com/database/search?&format=single&country=';
   this.country = country;
-  this.key = '';
-  this.secret = '';
+  this.key = '&key=wCLjKbdaipyYgYYlKimb';
+  this.secret = '&secret=qdMqNkUQufQxRUizeCEtZSXSmcTOtYwd';
 
 }
 
@@ -24,6 +24,14 @@ DiscogsApiCall.prototype.getTrackArray = function(parsedObject) {
     for(var x = 0; x < 10; x++) {
     this.trackArray.push(parsedObject.results[x].title);
     }
+};
+
+DiscogsApiCall.prototype.formatTrackArray = function() {
+  var formattedTracks = [];
+  this.trackArray.forEach (function(track) {
+    formattedTracks.push(track.replace(' -' , '').replace('*','').replace(/[(]\d[)]\s/g,'').split(' ').join('+'));
+  });
+  return formattedTracks;
 };
 
 //jsonObj.results[0].title.split(' - ');

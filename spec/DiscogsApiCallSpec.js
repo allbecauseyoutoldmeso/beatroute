@@ -21,9 +21,9 @@ describe('DiscogsApiCall', function() {
   });
 
   it('it formats the array to stringent, rigorous specifications', function() {
-
     discogsApiCall.getTrackArray(DemoData());
     expect(discogsApiCall.formatTrackArray()).toContain('Michel+Fuentes+Anything');
+    expect(discogsApiCall.formatTrackArray()).toContain('Nanne+Men');
   });
 
 });
