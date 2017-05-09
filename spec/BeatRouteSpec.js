@@ -5,12 +5,10 @@ describe ('Beatroute', function() {
       beatroute = new Beatroute();
 });
 
-  var testDouble = {
-    id: '6rqhFgbbKwnb9MLmUQDhG6',
-    name: 'Speak To Me - 2011 Remastered Version'
-  };
+  var testDouble = ['Pink+Floyd+Speak+To+Me']
+
 
   it('prints out song title from ID', function() {
-    expect(beatroute.displayTitle(testDouble)).toEqual('Speak To Me - 2011 Remastered Version')
+    expect(track(testDouble)).toEqual('574y1r7o2tRA009FW0LE7v')
   });
 });

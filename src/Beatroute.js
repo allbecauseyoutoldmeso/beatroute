@@ -2,6 +2,6 @@ var Beatroute = function() {
 
 }
 
-Beatroute.prototype.displayTitle = function(id) {
+Beatroute.prototype.track = function(id) {
   return id.name;
 };
