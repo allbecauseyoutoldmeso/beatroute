@@ -11,8 +11,8 @@ describe('ApiRequest', function() {
   });
 
   it('sends a request and receives a valid response', function() {
-    var response = apiRequest.sendRequest();
-    expect(response.status).toEqual(200);
+    apiRequest.sendRequest();
+    expect(apiRequest.request.status).toEqual(200);
   });
 
 });
