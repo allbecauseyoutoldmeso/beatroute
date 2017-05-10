@@ -3,8 +3,8 @@
 function DiscogsApiCall(country) {
   this.url = 'https://api.discogs.com/database/search?&format=single&country=';
   this.country = country;
-  this.key = '';
-  this.secret = '';
+  this.key = '&key=wCLjKbdaipyYgYYlKimb';
+  this.secret = '&secret=qdMqNkUQufQxRUizeCEtZSXSmcTOtYwd';
 
 }
 

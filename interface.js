@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-  var beatroute = new Beatroute();
-
   var queryArray = ['the+clash+lost+in+the+supermarket'];
 
   function track(queryArray) {
@@ -21,4 +19,18 @@ $(document).ready(function() {
     track(queryArray);
   });
 
+
+  
+
+  $('#selected-country').change(function() {
+    var country = $('#selected-country').val();
+    CallDiscogs(country);
+  });
+
+  function CallDiscogs(country){
+    var discogsApiCall = new DiscogsApiCall(country);
+    discogsApiCall.sendRequest();
+    discogsApiCall.getTrackArray(discogsApiCall.jsonParseResponse());
+    console.log(discogsApiCall.formatTrackArray());
+  }
 });
