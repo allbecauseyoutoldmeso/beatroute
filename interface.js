@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+  
   $('#displayTitle').click(function(){
     spotifyApiCall.getTrackId(queryArray);
   });

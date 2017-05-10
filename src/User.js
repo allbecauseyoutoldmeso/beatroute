@@ -2,7 +2,7 @@
 
 function User() {
   this.url = 'https://api.spotify.com/v1/me';
-  this.oAuthToken = 'BQB9UBk_BO4olq5m6xzaY3iJigPrbaNg-x15v0_WR3vpvWICWDbgupdZjFyo9KwKxGvKmRiEuT20JPaFVQigZiiUr10SBFG-r6CpMTGRVirVyLNZEe7t0wrXkdJt2IYtwvJe2KQiQOOcvDWV-JWLIJ1c5eDSKonPuP5EnS3dEHAaRzmsRN4V2-HyD2zL6AsuFfcBVNyEqRw8M0keb6XzGBE5l1n0xXUdyBJmheIVvwb9iNm7k55gDs4S8Bo1dJCWzzAbznz9KQ';
+  this.oAuthToken = 'BQDfE1jcL1ksXmLkJQu-c02WwnV02bgxkuZLzwFnx9SzWrQK-_cOC6yopF6fwf1UEF2AEg18xxN234gtwOWm-YDAz7EMgPyX-LWOV1uOvOXoMIYd1swQg_2unGB4JVlCLMSK_g_xOk0Y_D7apmmTx_tIYTgNJzd1M7wtb0DwEd_r_dt1ACA28Jd1kHaWHrKqIjw-AsfuoYmCgERe98VuSQrgqLiJ812PbSLG-_26RhCqwsE4kL_UeN5aWYLAvqM9QAWaaRDqCw';
 }
 
 User.prototype.requestUserData = function() {
@@ -21,5 +21,7 @@ User.prototype.getUserId = function(parsedObject) {
   return parsedObject.id;
 };
 
+//to get the user id run:
+//var user = new User()
 //user.requestUserId()
 //user.getUserId(user.jsonParseResponse())
