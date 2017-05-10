@@ -3,7 +3,7 @@
 function PlaylistMaker(userId, playlistString) {
   this.playListString = playlistString;
   this.url = 'https://api.spotify.com/v1/users/' + userId + '/playlists';
-  this.oAuthToken = 'BQD2zFbJmTqTe-eHnw9WeAOoeKBJBLagwbvznq9JoP1rXK3bGfIZ78aOe8eisTK4wt3fLV86_ImUEdTjh4ssSzrXwsrx2QDSkKuIcBEkXr6HtxSJchS1WENEmS5AHFmEkmb4Sp-F2Ul4ADTMMorobOqMIEZb3ay0nEPsb0FyPD_E8jYXVq4E12_EqkwOkK1pfTx4cQz1zKqR1F5ReEZ4IQp2NTQv91IZ4Ly3fKW2mtM3oApOftLYkBlwHxabOqXftDnI4dsoIg';
+  this.oAuthToken = 'BQC2N3xPxKwGFWsZmOU_icSj-kMrDemZT-kli6jg9k7a8pPUCbi2TbC8S3YiFwLZnlMtykzitAEac4n87eimSdQt-hZybiuwWyxcbq8JpzSuARZbDEeumZszgKkVrNrgA-nZ1IGo0x1sQlBLFCVEfmkifvgH9iZKo5IS9srarXjjNSGe9u7jk53tqZ8cGK_pJmOeVNp5H9bTp84Ehbv0XnRR55KJe56zljwbs1I6TbcmvM45spXLHBCtAEUBLvSZXUU7_JrIpA';
 }
 
 PlaylistMaker.prototype.makeEmptyPlaylist = function() {
@@ -25,4 +25,18 @@ PlaylistMaker.prototype.makeEmptyPlaylist = function() {
 		},
   });
   console.log('outside: ' + playlistId);
+};
+
+PlaylistMaker.prototype.addTracksToPlaylist = function() {
+  $.ajax(this.url + '/2sc3qbnnmJiVBDG0t0qxPX/tracks?position=0&uris=' + this.playListString, {
+  	method: 'POST',
+  	dataType: 'text',
+  	headers: {
+      'Authorization': 'Bearer ' + this.oAuthToken,
+  		'Content-Type': 'application/json'
+  	},
+  	success: function() {
+  		console.log('tracks added!');
+  	},
+	});
 };
