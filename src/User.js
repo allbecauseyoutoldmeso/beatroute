@@ -16,3 +16,10 @@ User.prototype.jsonParseResponse = function() {
   var parsedObject = JSON.parse(this.request.responseText);
   return parsedObject;
 };
+
+User.prototype.getUserId = function(parsedObject) {
+  return parsedObject.id;
+};
+
+//user.requestUserId()
+//user.getUserId(user.jsonParseResponse())

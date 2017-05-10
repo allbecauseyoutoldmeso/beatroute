@@ -14,8 +14,7 @@ it('successfully requests data about current user nb STOPS WORKING WHEN TOKEN EX
 });
 
 it('extracts the user ID from the user data', function() {
-  expect(user.getUserID(UserDemoData)).toEqual('allbecauseyoutoldmeso')
+  expect(user.getUserId(userDemoData())).toEqual('allbecauseyoutoldmeso')
 });
-
 
 });
