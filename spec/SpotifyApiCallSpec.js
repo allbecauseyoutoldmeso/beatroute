@@ -20,8 +20,8 @@ describe('SpotifyApiCall', function() {
   });
 
   it('creates an array of track ids from the supplied array', function() {
-      spotifyApiCall.lookUpTrackIds();
-    expect(spotifyApiCall.idArray).toEqual(['72boGlgSwUK01n44O2tOCv','72boGlgSwUK01n44O2tOCv' ])
+    spotifyApiCall.lookUpAndStoreTrackIds(testArrayMultiple);
+    expect(spotifyApiCall.idArray).toEqual(['72boGlgSwUK01n44O2tOCv','1FvDJ9KGxcqwv1utyPL3JZ' ])
   })
 
 });
