@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-  var beatroute = new Beatroute();
-
   var queryArray = ['the+clash+lost+in+the+supermarket'];
 
   function track(queryArray) {
