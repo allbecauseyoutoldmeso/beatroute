@@ -6,8 +6,13 @@ function SpotifyApiCall(array) {
   this.array = array;
 };
 
-SpotifyApiCall.prototype.sendRequest = function () {
+SpotifyApiCall.prototype.sendRequest = function (trackString) {
   this.request = new XMLHttpRequest();
-  this.request.open('GET', this.url + this.array[0] + this.searchLimit, false);
+  this.request.open('GET', this.url + trackString + this.searchLimit, false);
   this.request.send();
+};
+
+SpotifyApiCall.prototype.getTrackId = function(trackObject) {
+
+  return trackObject.tracks.items[0].id;
 };

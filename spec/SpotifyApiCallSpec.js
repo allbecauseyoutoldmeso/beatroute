@@ -3,19 +3,25 @@
 describe('SpotifyApiCall', function() {
 
   var spotifyApiCall;
-  var testArray = ['the+clash+lost+in+the+supermarket'];
+  var testString = 'the+clash+lost+in+the+supermarket';
+  var testArrayMultiple = ['the+clash+lost+in+the+supermarket', 'the+smiths+this+charming+man'];
 
   beforeEach(function() {
-      spotifyApiCall = new SpotifyApiCall(testArray);
+      spotifyApiCall = new SpotifyApiCall(testArrayMultiple);
   });
 
   it('sends request and receives response', function() {
-    spotifyApiCall.sendRequest();
+    spotifyApiCall.sendRequest(testString);
     expect(spotifyApiCall.request.status).toEqual(200);
   });
 
   it('should return the id for testArray-track', function() {
-    expect(spotifyApiCall.getTrackId(SpotifyDemoData())).toEqual('3RGLhK1IP9jnYFH4BRFJBS');
+    expect(spotifyApiCall.getTrackId(SpotifyDemoData())).toEqual('72boGlgSwUK01n44O2tOCv');
   });
+
+  it('creates an array of track ids from the supplied array', function() {
+      spotifyApiCall.lookUpTrackIds();
+    expect(spotifyApiCall.idArray).toEqual(['72boGlgSwUK01n44O2tOCv','72boGlgSwUK01n44O2tOCv' ])
+  })
 
 });
