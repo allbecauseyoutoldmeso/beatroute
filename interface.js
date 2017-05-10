@@ -14,7 +14,7 @@ $(document).ready(function() {
   }
 
   function goToUrl(id) {
-    window.location.replace('spotify:track:' + id);
+    window.location.replace('https://open.spotify.com/artist/' + id);
   }
 
   $('#displayTitle').click(function(){
