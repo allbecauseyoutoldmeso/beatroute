@@ -1,11 +1,7 @@
 $(document).ready(function() {
 
-  var beatroute = new Beatroute();
-
-  var queryArray = ['the+clash+lost+in+the+supermarket'];
-
   function track(queryArray) {
-    var artistAndTrackString = queryArray[0];
+    var artistAndTrackString = queryArray[6];
     var url = "https://api.spotify.com/v1/search?query=" + artistAndTrackString + '&type=track&offset=0&limit=1';
 
     $.get(url, function(data) {
@@ -21,4 +17,17 @@ $(document).ready(function() {
     track(queryArray);
   });
 
+  $('#selected-country').change(function() {
+    var country = $('#selected-country').val();
+    CallDiscogs(country);
+  });
+
+  function CallDiscogs(country){
+    var discogsApiCall = new DiscogsApiCall(country);
+    discogsApiCall.sendRequest();
+    discogsApiCall.getTrackArray(discogsApiCall.jsonParseResponse());
+    var queryArray = discogsApiCall.formatTrackArray();
+    console.log(discogsApiCall.formatTrackArray());
+    track(queryArray);
+  }
 });

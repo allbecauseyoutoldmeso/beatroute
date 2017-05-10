@@ -3,8 +3,8 @@
 function DiscogsApiCall(country) {
   this.url = 'https://api.discogs.com/database/search?&format=single&country=';
   this.country = country;
-  this.key = '';
-  this.secret = '';
+  this.key = '&key=wCLjKbdaipyYgYYlKimb';
+  this.secret = '&secret=qdMqNkUQufQxRUizeCEtZSXSmcTOtYwd';
 
 }
 
@@ -21,7 +21,7 @@ DiscogsApiCall.prototype.jsonParseResponse = function() {
 
 DiscogsApiCall.prototype.getTrackArray = function(parsedObject) {
     this.trackArray = [];
-    for(var x = 0; x < 10; x++) {
+    for(var x = 0; x < 20; x++) {
     this.trackArray.push(parsedObject.results[x].title);
     }
 };
