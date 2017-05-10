@@ -29,3 +29,18 @@ SpotifyApiCall.prototype.lookUpAndStoreTrackIds = function(array) {
     this.idArray.push(jsonObj.tracks.items[0].id);
   };
 };
+
+
+SpotifyApiCall.prototype.generatePlaylistString = function(idArray) {
+    
+  var formattedStringsArray = [];
+  var playlistUrlFormat = "spotify%3Atrack%3A";
+
+  for(var i = 0; i < idArray.length; i++) {
+    formattedStringsArray.push(playlistUrlFormat + idArray[i]);
+  };
+
+  var formattedStrings = formattedStringsArray.join();
+  return formattedStrings;
+
+};
