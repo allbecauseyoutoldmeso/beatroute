@@ -5,22 +5,4 @@ $(document).ready(function() {
     CallDiscogs(country);
   });
 
-  function CallDiscogs(country) {
-    var discogsApiCall = new DiscogsApiCall(country);
-    discogsApiCall.sendRequest();
-    discogsApiCall.getTrackArray(discogsApiCall.jsonParseResponse());
-    var formattedTrackArray = discogsApiCall.formatTrackArray();
-    return formattedTrackArray;
-  }
-
-  function CallSpotify() {
-
-  }
-
-
-
-
-
-
-
 });
