@@ -1,8 +1,8 @@
 'use strict';
 
-function User() {
+function User(oAuthToken) {
   this.url = 'https://api.spotify.com/v1/me';
-  this.oAuthToken = 'BQDfE1jcL1ksXmLkJQu-c02WwnV02bgxkuZLzwFnx9SzWrQK-_cOC6yopF6fwf1UEF2AEg18xxN234gtwOWm-YDAz7EMgPyX-LWOV1uOvOXoMIYd1swQg_2unGB4JVlCLMSK_g_xOk0Y_D7apmmTx_tIYTgNJzd1M7wtb0DwEd_r_dt1ACA28Jd1kHaWHrKqIjw-AsfuoYmCgERe98VuSQrgqLiJ812PbSLG-_26RhCqwsE4kL_UeN5aWYLAvqM9QAWaaRDqCw';
+  this.oAuthToken = oAuthToken;
 }
 
 User.prototype.requestUserData = function() {
