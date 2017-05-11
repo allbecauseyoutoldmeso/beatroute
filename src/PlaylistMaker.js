@@ -3,7 +3,7 @@
 function PlaylistMaker(userId, playlistString) {
   this.playlistString = playlistString;
   this.url = 'https://api.spotify.com/v1/users/' + userId + '/playlists';
-  this.oAuthToken = 'BQBV_TRfpab4x0tdxSyagLirI6DdJV6tUUHzRQef84QL076zoKmBhu5OCqbV1DWT2kFCeBnG-MvVQIPZK35rbRwSe0xsnGECSHRqPKafZb5tyfYXkIhka5Ct41ptNoJun760M5cwvdKcoPBLfPCVP5G_-dY2fdNRPfbyx6mi_CHpfQ-8cnXgCrNo95eylpEL3vwwtQ2vZfuSqyxSJIeaiVaadumLysHG1ks';
+  this.oAuthToken = 'BQClXm1i0EWRaiTAqkFUPpNu5lSrwgc7bno3yhJa6oFWOQgd3yChgWrJmHYVF3-o798885umfe7Bo_lqjxJB43yLFWWSRrCkhy269YpVVvrlBdwoEmY4k5izcrKKfbTFD3LhRyOiu3p5d4FIFuJYSuLIfzxq13o0xQVNNCswEk-asbToMqU4CS-VP_zLhDlZ43GcLQJer6My4AsTQQDwAh_ibKGvFfrvcib6HTgv759fOX8HvX3BQREx2QdY98wwIYKvP64Gnw';
 }
 
 PlaylistMaker.prototype.makeEmptyPlaylist = function(callback) {

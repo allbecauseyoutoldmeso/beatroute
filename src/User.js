@@ -23,5 +23,5 @@ User.prototype.getUserId = function(parsedObject) {
 
 //to get the user id run:
 //var user = new User()
-//user.requestUserId()
+//user.requestUserData()
 //user.getUserId(user.jsonParseResponse())
