@@ -9,12 +9,14 @@ function SpotifyApiCall(array) {
 
 SpotifyApiCall.prototype.lookUpAndStoreTrackIds = function(array) {
   for(var i = 0; i < array.length; i++) {
-    this.sendRequest(array[i]);
-    var jsonObj = this.jsonParseResponse();
-    if(jsonObj.tracks.items[0] != undefined) {
-      this.idArray.push(jsonObj.tracks.items[0].id);
+    if(this.idArray.length < 10) {
+      this.sendRequest(array[i]);
+      var jsonObj = this.jsonParseResponse();
+      if(jsonObj.tracks.items[0] != undefined) {
+        this.idArray.push(jsonObj.tracks.items[0].id);
+      }
     }
-  };
+  }
 };
 
 SpotifyApiCall.prototype.sendRequest = function (trackString) {
