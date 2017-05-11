@@ -26,8 +26,7 @@ describe('SpotifyApiCall', function() {
   })
 
   it('creates a string of formatted track IDs', function() {
-      expect(spotifyApiCall.generatePlaylistString(testIdArray)).toEqual('spotify%3Atrack%3A72boGlgSwUK01n44O2tOCv,spotify%3Atrack%3A1FvDJ9KGxcqwv1utyPL3JZ');
-
+    expect(spotifyApiCall.generatePlaylistString(testIdArray)).toEqual('spotify%3Atrack%3A72boGlgSwUK01n44O2tOCv,spotify%3Atrack%3A1FvDJ9KGxcqwv1utyPL3JZ');
   });
 
 });

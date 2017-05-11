@@ -32,7 +32,7 @@ SpotifyApiCall.prototype.lookUpAndStoreTrackIds = function(array) {
 
 
 SpotifyApiCall.prototype.generatePlaylistString = function(idArray) {
-    
+
   var formattedStringsArray = [];
   var playlistUrlFormat = "spotify%3Atrack%3A";
 
