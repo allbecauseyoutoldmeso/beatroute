@@ -8,7 +8,7 @@ describe('SpotifyApiCall', function() {
   var invalidTestArray = ["雀羅+壊胎"];
   var testIdArray = ['72boGlgSwUK01n44O2tOCv','1FvDJ9KGxcqwv1utyPL3JZ'];
   var halfValidArray = ["雀羅+壊胎", 'the+smiths+this+charming+man'];
-  var longArray = ['blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2'];
+  var elevenSongArray = ['blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2'];
 
   beforeEach(function() {
       spotifyApiCall = new SpotifyApiCall(testArrayMultiple);
@@ -43,7 +43,7 @@ describe('SpotifyApiCall', function() {
   })
 
   it('only processes 10 tracks', function() {
-    spotifyApiCall.lookUpAndStoreTrackIds(longArray);
+    spotifyApiCall.lookUpAndStoreTrackIds(elevenSongArray);
     expect(spotifyApiCall.idArray.length).toEqual(10)
   })
 
