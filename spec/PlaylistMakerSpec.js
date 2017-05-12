@@ -8,14 +8,14 @@ describe('PlaylistMaker', function() {
   })
 
 
-  it('should execute addTracksToPlaylist upon success', function() {
-    spyOn($, "ajax").and.callFake(function(options) {
-      options.success();
-    });
-
-    var callback = jasmine.createSpy('addTracksToPlaylist');
-    playlist.makeEmptyPlaylist(callback);
-    expect(callback).toHaveBeenCalled();
-  })
+  // it('should execute addTracksToPlaylist upon success', function() {
+  //   spyOn($, "ajax").and.callFake(function(options) {
+  //     options.success();
+  //   });
+  //
+  //   var callback = jasmine.createSpy('addTracksToPlaylist');
+  //   playlist.makeEmptyPlaylist(callback);
+  //   expect(callback).toHaveBeenCalled();
+  // })
 
 });

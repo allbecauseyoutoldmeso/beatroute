@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
-  //var beetRoot = new beetRoot(oAuthToken)
-  //beetRoot.getUserId()
+  // var beatRoot = new Beatroot(oAuthToken)
+  // beatRoot.getUserId()
 
   $('#selected-country').change(function() {
     var country = $('#selected-country').val();
-    //beetRoot.callDiscogs(country);
-    //beetRoot.callSpotify();
-    //beetRoot.createPlaylist();
+    // beatRoot.callDiscogs(country);
+    // beatRoot.callSpotify();
+    // beatRoot.createPlaylist();
   });
 
 });
