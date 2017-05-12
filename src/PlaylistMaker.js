@@ -1,16 +1,18 @@
 'use strict';
 
-function PlaylistMaker(userId, playlistString, oAuthToken) {
+function PlaylistMaker(userId, playlistString, oAuthToken, country) {
   this.playlistString = playlistString;
   this.url = 'https://api.spotify.com/v1/users/' + userId + '/playlists';
   this.oAuthToken = oAuthToken;
+  this.userId = userId;
+  this.country = country;
 }
 
 PlaylistMaker.prototype.makeEmptyPlaylist = function(callback) {
   $.ajax(this.url, {
 		method: 'POST',
 		data: JSON.stringify({
-			'name': 'beetroute playlist',
+			'name': this.country + ' playlist by Beatroute',
 			'public': false
 		}),
 		dataType: 'json',
@@ -25,6 +27,7 @@ PlaylistMaker.prototype.makeEmptyPlaylist = function(callback) {
 };
 
 PlaylistMaker.prototype.addTracksToPlaylist = function(playlistId) {
+  var userId = this.userId;
   $.ajax(this.url + '/' + playlistId + '/tracks?position=0&uris=' + this.playlistString, {
   	method: 'POST',
   	dataType: 'text',
@@ -34,6 +37,7 @@ PlaylistMaker.prototype.addTracksToPlaylist = function(playlistId) {
   	},
   	success: function() {
   		console.log('tracks added!');
+      window.location.replace('http://open.spotify.com/user/' + userId + '/playlist/' + playlistId);
   	},
 	});
 };

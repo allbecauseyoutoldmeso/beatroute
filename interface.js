@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
-  // var beatRoot = new Beatroot(oAuthToken)
-  // beatRoot.getUserId()
+  var params = getHashParams();
 
-  $('#selected-country').change(function() {
+  $('#create-playlist').click(function() {
     var country = $('#selected-country').val();
-    // beatRoot.callDiscogs(country);
-    // beatRoot.callSpotify();
-    // beatRoot.createPlaylist();
-  });
+    var beatroute = new Beatroute(params.access_token)
+    beatroute.runBeatroute(country);
+
+  })
+
 
 });
