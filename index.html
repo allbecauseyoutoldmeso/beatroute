@@ -39,6 +39,7 @@
   .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: rgb(100, 0, 70) !important;
     position: center;
+    border-color: rgb(100, 0, 70) !important;
   }
   .center-button {
     margin: auto;
@@ -48,9 +49,30 @@
   }
   .dropdown {
     margin: auto;
-    text-align: center;
+    text-align: center !important;
     padding-top: 200px;
+    font-size: 20px;
+    position: relative;
   }
+  .dropdown select {
+    /*outline: none;
+    -webkit-appearance: none;
+    display: block;
+    padding: 1.2em 3em 1.3em 1.5em;
+    margin: 0;
+    text-align: center !important;
+    transition: border-color 0.2s;
+    border: 5px solid rgb(100, 0, 70);
+    border-radius: 5px;
+    position: relative;
+    background: #fff;
+    color: #555;
+    line-height: normal;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;*/
+  }
+
  </style>
 
 
@@ -74,6 +96,7 @@
      </div>
    </div>
 <div class="dropdown">
+  <span class="arr"></span>
   <select id="selected-country">
     <option value="Albania">Albania</option>
     <option value="Argentina">Argentina</option>
