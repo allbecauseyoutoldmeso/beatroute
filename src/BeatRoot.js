@@ -24,6 +24,6 @@ function Beatroot(oAuthToken) {
   };
 
   Beatroot.prototype.createPlaylist = function () {
-    var playlist = new PlaylistMaker(this.userID, this.playlistString, this.oAuthToken);
+    var playlist = new PlaylistMaker(this.userId, this.playlistString, this.oAuthToken);
     playlist.makeEmptyPlaylist(function(r) { playlist.addTracksToPlaylist(r); });
   };

@@ -2,7 +2,7 @@
 
 function User() {
   this.url = 'https://api.spotify.com/v1/me';
-  this.oAuthToken = 'BQDfE1jcL1ksXmLkJQu-c02WwnV02bgxkuZLzwFnx9SzWrQK-_cOC6yopF6fwf1UEF2AEg18xxN234gtwOWm-YDAz7EMgPyX-LWOV1uOvOXoMIYd1swQg_2unGB4JVlCLMSK_g_xOk0Y_D7apmmTx_tIYTgNJzd1M7wtb0DwEd_r_dt1ACA28Jd1kHaWHrKqIjw-AsfuoYmCgERe98VuSQrgqLiJ812PbSLG-_26RhCqwsE4kL_UeN5aWYLAvqM9QAWaaRDqCw';
+  this.oAuthToken = 'BQDcErmWP-mdPi80qObcRCAVMTzMBgCtMuvab85udB1OOml9GH5YsFvElV2B7krleTpB9SAyIBfa8pl7p1R_fDFcOUNQh8nDqKsfuSWS-pGTo7RgA9tCDn_Atgglb5k-07a1UdppuCgHzP_ZfiWyaMrHSsHdb8N5a5BDvcy4VEhCkv6uWgn_tUMdBSPH8f5Q7KqbdogyMtS5kjkoRRTK0WQXkZaVQ-Y0nfleRjSF_a3GjboGmIzQWivMJEwSS23hq00m-o_vcspcP2mq0mAupfthmQAc1WCxP9qQmLiju5SsSa8DPeOIldAzVPR-8JDffjMrMe6Cu-H4eUJn';
 }
 
 User.prototype.requestUserData = function() {
