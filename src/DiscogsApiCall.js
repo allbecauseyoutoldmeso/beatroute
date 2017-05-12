@@ -21,7 +21,7 @@ DiscogsApiCall.prototype.jsonParseResponse = function() {
 
 DiscogsApiCall.prototype.getTrackArray = function(parsedObject) {
     this.trackArray = [];
-    for(var x = 0; x < 10; x++) {
+    for(var x = 0; x < 50; x++) {
     this.trackArray.push(parsedObject.results[x].title);
     }
 };

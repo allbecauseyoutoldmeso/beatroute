@@ -23,8 +23,8 @@ Beatroot.prototype.callSpotify = function () {
   this.playlistString = spotifyApiCall.generatePlaylistString(spotifyApiCall.idArray);
 };
 
-Beatroot.prototype.createPlaylist = function () {
-  var playlist = new PlaylistMaker(this.userId, this.playlistString, this.oAuthToken);
+Beatroot.prototype.createPlaylist = function (country) {
+  var playlist = new PlaylistMaker(this.userId, this.playlistString, this.oAuthToken, country);
   playlist.makeEmptyPlaylist(function(r) { playlist.addTracksToPlaylist(r); });
 };
 
@@ -32,5 +32,5 @@ Beatroot.prototype.runBeatroot = function(country) {
   this.getUserId();
   this.callDiscogs(country);
   this.callSpotify();
-  this.createPlaylist();
+  this.createPlaylist(country);
 };
