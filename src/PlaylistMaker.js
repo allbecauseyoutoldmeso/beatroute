@@ -12,7 +12,7 @@ PlaylistMaker.prototype.makeEmptyPlaylist = function(callback) {
   $.ajax(this.url, {
 		method: 'POST',
 		data: JSON.stringify({
-			'name': this.country + ' playlist by Beatroot',
+			'name': this.country + ' playlist by Beatroute',
 			'public': false
 		}),
 		dataType: 'json',

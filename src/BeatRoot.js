@@ -1,34 +1,34 @@
 'use strict';
 
-function Beatroot(oAuthToken) {
+function Beatroute(oAuthToken) {
   this.oAuthToken = oAuthToken;
 }
 
-Beatroot.prototype.getUserId = function() {
+Beatroute.prototype.getUserId = function() {
   var user = new User(this.oAuthToken);
   user.requestUserData();
   this.userId = user.getUserId(user.jsonParseResponse());
 };
 
-Beatroot.prototype.callDiscogs = function(country) {
+Beatroute.prototype.callDiscogs = function(country) {
   var discogsApiCall = new DiscogsApiCall(country);
   discogsApiCall.sendRequest();
   discogsApiCall.getTrackArray(discogsApiCall.jsonParseResponse());
   this.formattedTrackArray = discogsApiCall.formatTrackArray();
 };
 
-Beatroot.prototype.callSpotify = function () {
+Beatroute.prototype.callSpotify = function () {
   var spotifyApiCall = new SpotifyApiCall(this.formattedTrackArray);
   spotifyApiCall.lookUpAndStoreTrackIds(this.formattedTrackArray);
   this.playlistString = spotifyApiCall.generatePlaylistString(spotifyApiCall.idArray);
 };
 
-Beatroot.prototype.createPlaylist = function (country) {
+Beatroute.prototype.createPlaylist = function (country) {
   var playlist = new PlaylistMaker(this.userId, this.playlistString, this.oAuthToken, country);
   playlist.makeEmptyPlaylist(function(r) { playlist.addTracksToPlaylist(r); });
 };
 
-Beatroot.prototype.runBeatroot = function(country) {
+Beatroute.prototype.runBeatroute = function(country) {
   this.getUserId();
   this.callDiscogs(country);
   this.callSpotify();

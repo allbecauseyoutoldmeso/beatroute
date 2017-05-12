@@ -4,8 +4,8 @@ $(document).ready(function() {
 
   $('#create-playlist').click(function() {
     var country = $('#selected-country').val();
-    var beatRoot = new Beatroot(params.access_token)
-    beatRoot.runBeatroot(country);
+    var beatroute = new Beatroute(params.access_token)
+    beatroute.runBeatroute(country);
 
   })
 
