@@ -21,7 +21,9 @@ DiscogsApiCall.prototype.jsonParseResponse = function() {
 
 DiscogsApiCall.prototype.getTrackArray = function(parsedObject) {
     this.trackArray = [];
-    for(var x = 0; x < 10; x++) {
+
+    for(var x = 0; x < 50; x++) {
+
     this.trackArray.push(parsedObject.results[x].title);
     }
 };
@@ -33,8 +35,3 @@ DiscogsApiCall.prototype.formatTrackArray = function() {
   });
   return formattedTracks;
 };
-
-//DA = new DiscogsApiCall('Sweden');
-//DA.sendRequest();
-//DA.getTrackArray(DA.jsonParseResponse());
-//DA.formatTrackArray()

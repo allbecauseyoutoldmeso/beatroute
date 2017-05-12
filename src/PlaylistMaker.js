@@ -7,7 +7,6 @@ function PlaylistMaker(userId, playlistString, oAuthToken) {
 }
 
 PlaylistMaker.prototype.makeEmptyPlaylist = function(callback) {
-  this.playlistId = ''
   $.ajax(this.url, {
 		method: 'POST',
 		data: JSON.stringify({
@@ -20,7 +19,7 @@ PlaylistMaker.prototype.makeEmptyPlaylist = function(callback) {
 			'Content-Type': 'application/json'
 		},
 		success: function(response) {
-      callback(response.id)
+      callback(response.id);
 		},
   });
 };
@@ -38,6 +37,3 @@ PlaylistMaker.prototype.addTracksToPlaylist = function(playlistId) {
   	},
 	});
 };
-
-//var pl = new PlaylistMaker('allbecauseyoutoldmeso', 'spotify%3Atrack%3A4iV5W9uYEdYUVa79Axb7Rh,spotify%3Atrack%3A1301WleyT98MSxVHPZCA6M');
-//pl.makeEmptyPlaylist(function(r) { pl.addTracksToPlaylist(r) });

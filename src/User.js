@@ -20,8 +20,3 @@ User.prototype.jsonParseResponse = function() {
 User.prototype.getUserId = function(parsedObject) {
   return parsedObject.id;
 };
-
-//to get the user id run:
-//var user = new User()
-//user.requestUserId()
-//user.getUserId(user.jsonParseResponse())
