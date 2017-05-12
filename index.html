@@ -95,7 +95,7 @@
        </div>
      </div>
    </div>
-<div class="dropdown">
+<div id='country-selector' class="dropdown">
   <span class="arr"></span>
   <select id="selected-country">
     <option value="Albania">Albania</option>
@@ -183,24 +183,8 @@
 
 
     <script id="user-profile-template" type="text/x-handlebars-template">
-    <h1>Logged in as {{display_name}}</h1>
-    <div class="media">
-      <div class="pull-left">
-        <img class="media-object" width="150" src="{{images.0.url}}" />
-      </div>
-      <div class="media-body">
-        <dl class="dl-horizontal">
-          <dt>Display name</dt><dd class="clearfix">{{display_name}}</dd>
-          <dt>Id</dt><dd>{{id}}</dd>
-          <dt>Email</dt><dd>{{email}}</dd>
-          <dt>Spotify URI</dt><dd><a href="{{external_urls.spotify}}">{{external_urls.spotify}}</a></dd>
-          <dt>Link</dt><dd><a href="{{href}}">{{href}}</a></dd>
-          <dt>Profile Image</dt><dd class="clearfix"><a href="{{images.0.url}}">{{images.0.url}}</a></dd>
-          <dt>Country</dt><dd>{{country}}</dd>
-        </dl>
-      </div>
-    </div>
-  </script>
+      <p>Logged in as {{id}}</p>
+    </script>
 
   <script id="oauth-template" type="text/x-handlebars-template">
       <h2>oAuth info</h2>
@@ -264,11 +248,13 @@
                  userProfilePlaceholder.innerHTML = userProfileTemplate(response);
                  $('#login').hide();
                  $('#loggedin').show();
+                 $('#country-selector').show();
                }
            });
          } else {
              $('#login').show();
              $('#loggedin').hide();
+              $('#country-selector').hide();
          }
          document.getElementById('login-button').addEventListener('click', function() {
            var client_id = '1b3a5085e5944c40b4e90340b21e473b'; // Your client id
