@@ -36,7 +36,6 @@ PlaylistMaker.prototype.addTracksToPlaylist = function(playlistId) {
   		'Content-Type': 'application/json'
   	},
   	success: function() {
-  		console.log('tracks added!');
       window.location.replace('http://open.spotify.com/user/' + userId + '/playlist/' + playlistId);
   	},
 	});
