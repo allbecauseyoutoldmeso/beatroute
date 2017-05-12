@@ -8,8 +8,8 @@ describe('PlaylistMaker', function() {
   })
 
 
-  it('should execute addTracksToPlaylist upon success', function(options) {
-    spyOn($, 'ajax').and.callFake(function(options) {
+  it('should execute addTracksToPlaylist upon success', function() {
+    spyOn($, "ajax").and.callFake(function(options) {
       options.success();
     });
 

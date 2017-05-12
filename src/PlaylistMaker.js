@@ -37,6 +37,3 @@ PlaylistMaker.prototype.addTracksToPlaylist = function(playlistId) {
   	},
 	});
 };
-
-//var pl = new PlaylistMaker('allbecauseyoutoldmeso', 'spotify%3Atrack%3A4iV5W9uYEdYUVa79Axb7Rh,spotify%3Atrack%3A1301WleyT98MSxVHPZCA6M');
-//pl.makeEmptyPlaylist(function(r) { pl.addTracksToPlaylist(r) });
