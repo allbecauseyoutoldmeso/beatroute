@@ -98,15 +98,14 @@
     <option value="Venezuela">Venezuela</option>
   </select>
 
+  <button type='button' id='create-playlist'>Create Playlist!</button>
+
     <script type="text/javascript" src="interface.js"></script>
     <script src="src/User.js"></script>
     <script src="src/DiscogsApiCall.js"></script>
-    <script src="src/SpotifyApiCall.js"></script>
-
-    <script src="src/PlaylistMaker.js"></script>
+    <script src="src/SpotifyApiCall.js"></script>x
     <script src="src/Beatroot.js"></script>
-
-  <script src="src/PlaylistMaker.js"></script>
+    <script src="src/PlaylistMaker.js"></script>
 
 
     <script id="user-profile-template" type="text/x-handlebars-template">
@@ -139,7 +138,7 @@
    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
 
    <script>
-     (function() {
+     (function(exports) {
        var stateKey = 'spotify_auth_state';
        /**
         * Obtains parameters from the hash of the URL
@@ -212,7 +211,9 @@
            window.location = url;
          }, false);
        }
-     })();
+
+       exports.getHashParams = getHashParams
+     })(this);
    </script>
 
 </body>

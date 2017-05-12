@@ -27,3 +27,10 @@ Beatroot.prototype.createPlaylist = function () {
   var playlist = new PlaylistMaker(this.userId, this.playlistString, this.oAuthToken);
   playlist.makeEmptyPlaylist(function(r) { playlist.addTracksToPlaylist(r); });
 };
+
+Beatroot.prototype.runBeatroot = function(country) {
+  this.getUserId();
+  this.callDiscogs(country);
+  this.callSpotify();
+  this.createPlaylist();
+};
