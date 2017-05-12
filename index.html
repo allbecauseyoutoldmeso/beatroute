@@ -7,16 +7,86 @@
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <title>Example of the Implicit Grant flow with Spotify</title>
  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
- <link rel="stylesheet" src='stylesheet.css'>
+ <link rel="stylesheet" src='/css/stylesheet.css'>
+ <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Permanent+Marker" rel="stylesheet">
+ <style>
+  #login, #loggedin {
+    display: none;
+  }
+  .text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 500px;
+  }
+  body {
+    background-image: url("image/map.png");
+    background-color: rgb(230,230,230);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+  h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 70px;
+    color: rgb(100, 0, 70);
+    padding-top: 50px;
+    text-align: center;
+  }
+  .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: rgb(100, 0, 70) !important;
+    position: center;
+    border-color: rgb(100, 0, 70) !important;
+  }
+  .center-button {
+    margin: auto;
+    text-align: center;
+    border-top: 200px;
+    padding-top: 200px;
+  }
+  .dropdown {
+    margin: auto;
+    text-align: center !important;
+    padding-top: 200px;
+    font-size: 20px;
+    position: relative;
+  }
+  .dropdown select {
+    /*outline: none;
+    -webkit-appearance: none;
+    display: block;
+    padding: 1.2em 3em 1.3em 1.5em;
+    margin: 0;
+    text-align: center !important;
+    transition: border-color 0.2s;
+    border: 5px solid rgb(100, 0, 70);
+    border-radius: 5px;
+    position: relative;
+    background: #fff;
+    color: #555;
+    line-height: normal;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;*/
+  }
+
+ </style>
+
 
 </head>
 
 
 <body>
   <div class="container">
+    <h1>BeatRoutes</h1>
      <div id="login">
-       <h1>This is an example of the Implicit Grant flow</h1>
-       <button id="login-button" class="btn btn-primary">Log in with Spotify</button>
+
+       <div class="center-button">
+       <button id="login-button" class="btn btn-primary btn-lg">Log in with Spotify</button>
+     </div>
      </div>
      <div id="loggedin">
        <div id="user-profile">
@@ -25,8 +95,8 @@
        </div>
      </div>
    </div>
-
-
+<div class="dropdown">
+  <span class="arr"></span>
   <select id="selected-country">
     <option value="Albania">Albania</option>
     <option value="Argentina">Argentina</option>
@@ -98,7 +168,11 @@
     <option value="Venezuela">Venezuela</option>
   </select>
 
+
   <button type='button' id='create-playlist'>Create Playlist!</button>
+
+
+</div>
 
     <script type="text/javascript" src="interface.js"></script>
     <script src="src/User.js"></script>
@@ -215,7 +289,6 @@
        exports.getHashParams = getHashParams
      })(this);
    </script>
-
 </body>
 
 
