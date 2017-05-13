@@ -7,10 +7,10 @@ function SpotifyApiCall(array) {
   this.idArray = [];
 };
 
-SpotifyApiCall.prototype.lookUpAndStoreTrackIds = function(array) {
-  for(var i = 0; i < array.length; i++) {
+SpotifyApiCall.prototype.lookUpAndStoreTrackIds = function() {
+  for(var i = 0; i < this.array.length; i++) {
     if(this.idArray.length < 10) {
-      this.sendRequest(array[i]);
+      this.sendRequest(this.array[i]);
       var jsonObj = this.jsonParseResponse();
       if(jsonObj.tracks.items[0] != undefined) {
         this.idArray.push(jsonObj.tracks.items[0].id);
@@ -30,17 +30,13 @@ SpotifyApiCall.prototype.jsonParseResponse = function() {
   return this.parsedObject;
 };
 
-SpotifyApiCall.prototype.getTrackId = function(trackObject) {
-  return trackObject.tracks.items[0].id;
-};
-
-SpotifyApiCall.prototype.generatePlaylistString = function(idArray) {
+SpotifyApiCall.prototype.generatePlaylistString = function() {
 
   var formattedStringsArray = [];
   var playlistUrlFormat = "spotify%3Atrack%3A";
 
-  for(var i = 0; i < idArray.length; i++) {
-    formattedStringsArray.push(playlistUrlFormat + idArray[i]);
+  for(var i = 0; i < this.idArray.length; i++) {
+    formattedStringsArray.push(playlistUrlFormat + this.idArray[i]);
   };
 
   var formattedStrings = formattedStringsArray.join();
