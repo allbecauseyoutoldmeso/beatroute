@@ -5,7 +5,7 @@ function SpotifyApiCall(array) {
   this.searchLimit = '&type=track&offset=0&limit=1';
   this.array = array;
   this.idArray = [];
-};
+}
 
 SpotifyApiCall.prototype.lookUpAndStoreTrackIds = function() {
   for(var i = 0; i < this.array.length; i++) {
@@ -35,7 +35,7 @@ SpotifyApiCall.prototype.generatePlaylistString = function() {
   var playlistUrlFormat = "spotify%3Atrack%3A";
   for(var i = 0; i < this.idArray.length; i++) {
     formattedStringsArray.push(playlistUrlFormat + this.idArray[i]);
-  };
+  }
   var formattedStrings = formattedStringsArray.join();
   return formattedStrings;
 };

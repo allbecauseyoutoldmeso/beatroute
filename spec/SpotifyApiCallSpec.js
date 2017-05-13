@@ -10,10 +10,6 @@ describe('SpotifyApiCall', function() {
   var halfValidArray = ["雀羅+壊胎", 'the+smiths+this+charming+man'];
   var elevenSongArray = ['blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2', 'blur+song+2'];
 
-  // beforeEach(function() {
-  //     spotifyApiCall = new SpotifyApiCall(testArrayMultiple);
-  // });
-
   it('sends request and receives response', function() {
     spotifyApiCall = new SpotifyApiCall(testArrayMultiple);
     spotifyApiCall.sendRequest(testString);
