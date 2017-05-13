@@ -31,15 +31,11 @@ SpotifyApiCall.prototype.jsonParseResponse = function() {
 };
 
 SpotifyApiCall.prototype.generatePlaylistString = function() {
-
   var formattedStringsArray = [];
   var playlistUrlFormat = "spotify%3Atrack%3A";
-
   for(var i = 0; i < this.idArray.length; i++) {
     formattedStringsArray.push(playlistUrlFormat + this.idArray[i]);
   };
-
   var formattedStrings = formattedStringsArray.join();
   return formattedStrings;
-
 };
