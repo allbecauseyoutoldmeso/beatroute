@@ -33,8 +33,3 @@ DiscogsApiCall.prototype.formatTrackArray = function() {
   });
   return formattedTracks;
 };
-
-//DA = new DiscogsApiCall('Sweden');
-//DA.sendRequest();
-//DA.getTrackArray(DA.jsonParseResponse());
-//DA.formatTrackArray()
