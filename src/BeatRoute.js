@@ -18,7 +18,7 @@ Beatroute.prototype.callDiscogs = function(country) {
 };
 
 Beatroute.prototype.callSpotify = function () {
-  var spotifyApiCall = new SpotifyApiCall(this.formattedTrackArray);
+  var spotifyApiCall = new SpotifyApiCall(this.formattedTrackArray, this.oAuthToken);
   spotifyApiCall.lookUpAndStoreTrackIds();
   this.playlistString = spotifyApiCall.generatePlaylistString();
 };

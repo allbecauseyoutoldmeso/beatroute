@@ -1,10 +1,11 @@
 'use strict';
 
-function SpotifyApiCall(array) {
+function SpotifyApiCall(array, oAuthToken) {
   this.url = "https://api.spotify.com/v1/search?query=";
   this.searchLimit = '&type=track&offset=0&limit=1';
   this.array = array;
   this.idArray = [];
+  this.oAuthToken = oAuthToken;
 }
 
 SpotifyApiCall.prototype.lookUpAndStoreTrackIds = function() {
@@ -22,6 +23,7 @@ SpotifyApiCall.prototype.lookUpAndStoreTrackIds = function() {
 SpotifyApiCall.prototype.sendRequest = function (trackString) {
   this.request = new XMLHttpRequest();
   this.request.open('GET', this.url + trackString + this.searchLimit, false);
+  this.request.setRequestHeader('Authorization', 'Bearer ' + this.oAuthToken)
   this.request.send();
 };
 
