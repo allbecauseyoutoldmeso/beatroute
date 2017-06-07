@@ -1,0 +1,30 @@
+{
+  "name": "beatroute",
+  "version": "1.0.0",
+  "description": "* Week 9 group project at Makers.",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "open-spotify-remote": "^1.0.3",
+    "querystring": "^0.2.0",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allbecauseyoutoldmeso/beatroute.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allbecauseyoutoldmeso/beatroute/issues"
+  },
+  "homepage": "https://github.com/allbecauseyoutoldmeso/beatroute#readme"
+}
