@@ -50,7 +50,7 @@
     }
     document.getElementById('login-button').addEventListener('click', function() {
       var client_id = '1651ef07fade4572a6fbcd876e840b22';
-      var redirect_uri = 'http://localhost:8888/';
+      var redirect_uri = 'https://beatroute.herokuapp.com/';
       var state = generateRandomString(16);
       localStorage.setItem(stateKey, state);
       var scope = 'playlist-modify-public playlist-modify-private';
