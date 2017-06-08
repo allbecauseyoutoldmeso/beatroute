@@ -1,4 +1,4 @@
-'use strict';
+(function(exports) {
 
 function Beatroute(oAuthToken) {
   this.oAuthToken = oAuthToken;
@@ -34,3 +34,6 @@ Beatroute.prototype.runBeatroute = function(country) {
   this.callSpotify();
   this.createPlaylist(country);
 };
+
+exports.Beatroute = Beatroute;
+})(this);

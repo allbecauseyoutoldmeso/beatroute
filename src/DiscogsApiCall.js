@@ -1,4 +1,4 @@
-'use strict';
+(function(exports) {
 
 function DiscogsApiCall(country) {
   this.url = 'https://api.discogs.com/database/search?&format=single&country=';
@@ -33,3 +33,6 @@ DiscogsApiCall.prototype.formatTrackArray = function() {
   });
   return formattedTracks;
 };
+
+exports.DiscogsApiCall = DiscogsApiCall;
+})(this);

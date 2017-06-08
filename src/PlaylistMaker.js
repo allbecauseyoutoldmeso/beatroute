@@ -1,4 +1,4 @@
-'use strict';
+(function(exports) {
 
 function PlaylistMaker(userId, playlistString, oAuthToken, country) {
   this.playlistString = playlistString;
@@ -40,3 +40,6 @@ PlaylistMaker.prototype.addTracksToPlaylist = function(playlistId) {
   	},
 	});
 };
+
+exports.PlaylistMaker = PlaylistMaker;
+})(this);

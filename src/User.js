@@ -1,4 +1,4 @@
-'use strict';
+(function(exports) {
 
 function User(oAuthToken) {
   this.url = 'https://api.spotify.com/v1/me';
@@ -20,3 +20,6 @@ User.prototype.jsonParseResponse = function() {
 User.prototype.getUserId = function(parsedObject) {
   return parsedObject.id;
 };
+
+exports.User = User;
+})(this);

@@ -1,4 +1,4 @@
-'use strict';
+(function(exports) {
 
 function SpotifyApiCall(array, oAuthToken) {
   this.url = "https://api.spotify.com/v1/search?query=";
@@ -41,3 +41,6 @@ SpotifyApiCall.prototype.generatePlaylistString = function() {
   var formattedStrings = formattedStringsArray.join();
   return formattedStrings;
 };
+
+exports.SpotifyApiCall = SpotifyApiCall;
+})(this);
