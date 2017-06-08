@@ -49,8 +49,8 @@
          $('#country-selector').hide();
     }
     document.getElementById('login-button').addEventListener('click', function() {
-      var client_id = '1b3a5085e5944c40b4e90340b21e473b'; // Your client id
-      var redirect_uri = 'http://localhost:8888/'; // Your redirect uri
+      var client_id = '1b3a5085e5944c40b4e90340b21e473b';
+      var redirect_uri = 'https://beatroute.herokuapp.com/'; 
       var state = generateRandomString(16);
       localStorage.setItem(stateKey, state);
       var scope = 'playlist-modify-public playlist-modify-private';
