@@ -4,6 +4,8 @@
 
 * Node app for creating Spotify playlists based on the country of your choice.
 
+* Uses the Discogs API service to make a lists of tracks based on a country, and the Spotify API service to generate a playlist.
+
 * Check it out <a href="https://beatroute.herokuapp.com">here</a>.  
 
 <img width="752" alt="screen shot 2017-05-14 at 16 05 12" src="https://cloud.githubusercontent.com/assets/25392162/26035134/359450fa-38bf-11e7-9c90-6564aae78a33.png">
