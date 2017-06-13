@@ -4,7 +4,7 @@
 
 * Our group consisted of Elaine Osbourn, Alex Jukes, Magnus Holm and Kate Gleeson. 
 
-* A node.js app for creating Spotify playlists based on the country of your choice.
+* A Node.js app for creating Spotify playlists based on the country of your choice.
 
 * Uses the Discogs API service to make a lists of tracks based on a country, and the Spotify API service to generate a playlist.
 
